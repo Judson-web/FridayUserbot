@@ -47,5 +47,5 @@ class Engine:
         lang_ = Friday.selected_lang
         return (
             language_string.get(lang_).get(string)
-            or f"**404_STRING_NOT_FOUND :** `String {string} Not Found in {lang} String 	File. - Please Report It To @FridayChat`"
+            or f"**404_STRING_NOT_FOUND :** `String {string} Not Found in {lang} String 	File. - Please Report It To @storytym`"
         )
