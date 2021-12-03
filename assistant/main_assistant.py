@@ -39,7 +39,7 @@ async def start(client, message):
     bot_username = starkbot.username
     firstname = message.from_user.first_name
     user_id = message.from_user.id
-    starttext = f"`Hello, {firstname} ! Nice To Meet You, \nWell I Am {bot_name}, \nA Powerful Assistant Bot To Talk And Do Many Things For My Master!`"
+    starttext = f"`𝙷𝚕𝚘, {firstname} ! 𝙽𝚒𝚌𝚎 𝚃𝚘 𝙼𝚎𝚎𝚝 𝚈𝚘𝚞, \n𝚆𝚎𝚕𝚕 𝙸 𝙰𝚖 {bot_name}, \n𝙰 𝙿𝚘𝚠𝚎𝚛𝚏𝚞𝚕 𝙰𝚜𝚜𝚒𝚜𝚝𝚊𝚗𝚝 𝙱𝚘𝚝 𝚃𝚘 𝚃𝚊𝚕𝚔 𝙰𝚗𝚍 𝙳𝚘 𝙼𝚊𝚗𝚢 𝚃𝚑𝚒𝚗𝚐𝚜 𝙵𝚘𝚛 𝙼𝚢 𝙼𝚊𝚜𝚝𝚎𝚛!`"
     mypic = Config.ASSISTANT_START_PIC
     if user_id not in all_user_s:
         await client.send_photo(
@@ -47,14 +47,14 @@ async def start(client, message):
             mypic,
             starttext,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Help Me ❓", url="t.me/storytym")]]
+                [[InlineKeyboardButton("ᴀɴʏ ʜᴇʟᴘ", url="t.me/STMbOTsUPPORTgROUP")]]
             ),
         )
         kok = await check_user(user_id)
         if not kok:
             await add_user(user_id)
     else:
-        message87 = f"Hi Master, It's Me {bot_name}, Your Assistant ! \nWhat Do you wanna do today ?"
+        message87 = f"𝙷𝚒 𝙼𝚊𝚜𝚝𝚎𝚛, 𝙸𝚝'𝚜 𝙼𝚎 {bot_name}, 𝚈𝚘𝚞𝚛 𝙰𝚜𝚜𝚒𝚜𝚝𝚊𝚗𝚝 ! \n𝚆𝚑𝚊𝚝 𝙳𝚘 𝚢𝚘𝚞 𝚠𝚊𝚗𝚗𝚊 𝚍𝚘 𝚝𝚘𝚍𝚊𝚢 ?"
         await client.send_photo(
             message.chat.id,
             mypic,
@@ -63,13 +63,13 @@ async def start(client, message):
                 [
                     [
                         InlineKeyboardButton(
-                            "Add Me to Group 👥",
+                            "ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ",
                             url=f"t.me/{bot_username}?startgroup=true",
                         )
                     ],
                     [
                         InlineKeyboardButton(
-                            "Commands For Assistant", callback_data="cmdgiv"
+                            "ᴄᴏᴍᴍᴀɴᴅꜱ ᴏꜰ ᴅᴀʀᴋ ᴜꜱᴇʀʙᴏᴛ", callback_data="cmdgiv"
                         )
                     ],
                 ]
@@ -79,7 +79,7 @@ async def start(client, message):
 
 @bot.on_callback_query(filters.regex("cmdgiv"))
 async def cmdgiv(client, cb):
-    grabon = "Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr (lang-code) \n➤ /tts (lang-code) \n➤ /promote - Promote a user \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Chat \n➤ /info - Shows INFO of User \n➤ /users - Get List Of Users In dB. "
+    grabon = "𝙷𝚎𝚕𝚕𝚘 𝙷𝚎𝚛𝚎 𝙰𝚛𝚎 𝚂𝚘𝚖𝚎 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜 \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr (lang-code) \n➤ /tts (lang-code) \n➤ /promote - Promote a user \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Chat \n➤ /info - Shows INFO of User \n➤ /users - Get List Of Users In dB. "
     await cb.edit_message_text(grabon)
 
 
@@ -95,7 +95,7 @@ async def alive(client, message):
 @bot.on_message(filters.command(["help"]) & filters.incoming)
 @_check_owner_or_sudos
 async def fuckinhelp(client, message):
-    grabon = "Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr (lang-code) \n➤ /tts (lang-code) \n➤ /promote - Promote a user \n➤ /demote - Demote a user \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Chat \n➤ /info - Shows INFO of User \n➤ /users - Get List Of Users In dB. "
+    grabon = "𝙷𝚎𝚕𝚕𝚘 𝙷𝚎𝚛𝚎 𝙰𝚛𝚎 𝚂𝚘𝚖𝚎 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜 \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr (lang-code) \n➤ /tts (lang-code) \n➤ /promote - Promote a user \n➤ /demote - Demote a user \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Chat \n➤ /info - Shows INFO of User \n➤ /users - Get List Of Users In dB. "
     await message.reply(grabon)
 
 
