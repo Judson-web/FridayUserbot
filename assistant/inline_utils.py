@@ -263,7 +263,7 @@ async def owo(client, inline_query):
         ]
         if Config.LOAD_UNOFFICIAL_PLUGINS:
             total_ = len(XTRA_CMD_LIST) + len(CMD_LIST)
-        nice_text = f"**FridayUserBot Commands** \n**Friday Version :** __{friday_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{total_}__"
+        nice_text = f"**DarkUserBot Commands** \n**Dark Version :** __{friday_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{total_}__"
         await client.answer_inline_query(
             inline_query.id,
             cache_time=0,
@@ -409,7 +409,7 @@ async def black_menu(client, cb):
         ]
     if Config.LOAD_UNOFFICIAL_PLUGINS:
         total_ = len(XTRA_CMD_LIST) + len(CMD_LIST)
-    nice_text = f"**FridayUserBot Commands** \n**Friday Version :** __{friday_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{total_}__"
+    nice_text = f"**DarkUserBot Commands** \n**Dark Version :** __{friday_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{totaLoaded :** __{total_}__"l_}__"
     await cb.edit_message_text(nice_text, reply_markup=InlineKeyboardMarkup(bttn))
 
 @bot.on_callback_query(filters.regex(pattern="make_cmd_buttons"))
@@ -601,7 +601,7 @@ async def get_back_vro(client, cb):
     is_official = cb.matches[0].group(2) != "False"
     cmd_list = CMD_LIST if is_official else XTRA_CMD_LIST
     buttons = paginate_help(page_number, cmd_list, "helpme", is_official=is_official)
-    nice_text = f"**FridayUserBot Commands & Help Menu!** \n\n**Friday Version :** __{friday_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{len(CMD_LIST)}__"
+    nice_text = f"**DarkUserBot Commands & Help Menu!** \n\n**Dark Version :** __{friday_version}__ \n**PyroGram Version :** __{__version__}__ \n**Total Plugins Loaded :** __{len(CMD_LIST)}__"
     await cb.edit_message_text(nice_text, reply_markup=InlineKeyboardMarkup(buttons))
 
 
